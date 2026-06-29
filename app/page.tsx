@@ -307,6 +307,14 @@ export default function HomePage() {
         {/* ===== Footer ===== */}
         <footer className="border-t border-border-subtle bg-abyss">
           <div className="max-w-6xl mx-auto px-4 lg:px-6 py-6">
+            {/* More Game Guides */}
+            <div className="mb-4 pb-4 border-b border-border-subtle">
+              <p className="text-[10px] font-mono uppercase tracking-wider text-text-muted mb-2">More Strategy Game Guides</p>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://tabletop-tavern-guide.vercel.app" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-text-secondary hover:text-tactical-blue transition-colors">Tabletop Tavern Guide</a>
+                <a href="https://vampire-crawlers-guide.vercel.app" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-text-secondary hover:text-tactical-blue transition-colors">Vampire Crawlers Guide</a>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4 text-[11px] font-mono text-text-muted">
                 <span>&copy; {new Date().getFullYear()} Mewgenics</span>
