@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'battle-tactics',
     'breeding-guide',
     'items',
+    'beginner-guide',
+    'cat-tier-list',
     'faq',
   ];
 
