@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import SchemaMarkup from '@/shared/SchemaMarkup';
+
 
 export const metadata: Metadata = {
   title: 'Mewgenics - Tactical Command Center',
   description: 'The ultimate Mewgenics guide with builds, strategies, tier lists, and in-depth walkthroughs.',
-  metadataBase: new URL('https://mewgenics-guide.vercel.app'),
+  metadataBase: new URL("https://mewgenics.gguidehub.com"),
   openGraph: {
     title: 'Mewgenics',
     description: 'The ultimate Mewgenics guide with builds, strategies, tier lists, and in-depth walkthroughs.',
