@@ -75,7 +75,7 @@ export default function HomePage() {
             <span className="text-[10px] font-mono font-bold text-abyss">CMD</span>
           </div>
           <span className="font-display text-sm font-semibold tracking-tight text-text-primary">
-            Mewgenics_SHORT
+            Mewgenics
           </span>
         </div>
 
