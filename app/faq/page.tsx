@@ -1,159 +1,120 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mewgenics FAQ — Complete Guide (2026)',
-  description: 'Comprehensive Mewgenics FAQ guide covering common questions, beginner tips, known issues. Updated for 2026 with the latest strategies and tips.',
+  title: 'Mewgenics FAQ — Frequently Asked Questions & Answers',
+  description: 'Complete Mewgenics FAQ covering cat breeding, tactical combat, positioning strategy, class choices, home upgrades, environmental mechanics, and more. Updated for 2026.',
 };
 
-export default function FAQPage() {
+const FAQ_ITEMS = [
+  {
+    q: "What is Mewgenics and who made it?",
+    a: "Mewgenics is a cat-themed strategic roguelike developed by Edmund McMillen (creator of The Binding of Isaac and Super Meat Boy) and Tyler Glaiel (The End Is Nigh). It combines deep cat breeding genetics, grid-based turn-by-turn tactical combat, and home/cattery management. Each cat fights only once before retiring, and every generation is a fresh start. The game features 281 Steam achievements, thousands of unique abilities, and hundreds of enemies. It is available on PC via Steam Early Access.",
+  },
+  {
+    q: "How does cat breeding work in Mewgenics?",
+    a: "Breeding is the core progression system. Kittens inherit stats and abilities from their parents — pairing choices directly determine offspring strength. Each cat can only deploy into combat once, after which they retire. This means you must continuously breed new generations to maintain your fighting roster. Inbreeding increases mutation risk — some mutations are harmful, but others unlock powerful unique traits like extra limbs, elemental affinities, or enhanced stats. Focus breeding pairs that complement each other's strengths: a high-damage male with a high-speed female produces kittens that can hit hard and act early in turn order.",
+  },
+  {
+    q: "Why is positioning so important in Mewgenics combat?",
+    a: "Positioning is the single most impactful mechanic in Mewgenics. Backstab attacks deal drastically more damage than frontal assaults — a 5-damage scratch can become a 15-damage critical from behind. Always click the right side of your cat to control which direction they face, since enemies also deal more damage from behind. Grass tiles provide a massive 50% dodge chance. Water can be used to grow grass, shock groups of enemies with electricity, or extinguish fires. Fire burns enemies out of cover and denies their positioning. Treat every battlefield element as a potential weapon.",
+  },
+  {
+    q: "How many cats should I take on missions?",
+    a: "You do not need four cats for every excursion. Taking three cats means faster leveling since post-battle XP is not split four ways. While this makes individual runs harder, the accelerated growth often compensates. Two cats provides maximum XP per cat but is viable only for expert players comfortable with high risk. Four cats gives the most stable, balanced runs with lower individual XP. For beginners, start with four cats until you understand the combat system, then experiment with three-cat squads once you can read enemy patterns and terrain effectively.",
+  },
+  {
+    q: "What do wet hairballs actually do?",
+    a: "Wet hairballs are one of the most versatile tactical tools. They can: extinguish fires at range (critical against bomb-throwing bosses), push enemies into environmental hazards, create water puddles for grass growth, and stop burn damage on your own cats. To use them offensively, walk a cat through water first to make their hairball wet, then throw it at a dry grass tile to grow full cover. Against fire-based enemies, wet hairballs are essential — a single well-placed throw can neutralize an entire area-denial strategy. Keep at least one cat capable of producing hairballs in every squad.",
+  },
+  {
+    q: "What are the best beginner cat classes and abilities?",
+    a: "There is no single best class — each has distinct tactical roles. For beginners, prioritize classes with sustain and positioning tools: Healers keep your squad alive through longer runs, Tanks absorb damage and protect fragile damage dealers, and Scouts with speed upgrades act earlier in turn order. Look for abilities that synergize with positioning: crit chance passives combined with backstab-capable cats create deadly combinations. Avoid classes that rely on complex resource management (like pure mana casters) until you understand the combat rhythm. Read every ability tooltip before committing a cat to a build path.",
+  },
+  {
+    q: "How does the home/cattery system work?",
+    a: "Your cattery is your persistent home base where you manage cats between missions. You place furniture to tune house stats, which affect breeding outcomes and cat morale. Different furniture themes provide set bonuses when combined — for example, matching gothic or royal furniture sets grants extra stat boosts. Upgrade your cattery to house more cats, unlock better breeding chambers, and access stronger starting equipment. Visit the cattery between every mission to check for new random events, breed kittens, and re-equip your active squad.",
+  },
+  {
+    q: "How should I manage resources like food, money, and catnip?",
+    a: "Food is consumed by every cat in your cattery, not just your active squad. Cut losses quickly with new kittens or strays — if they lack useful starting abilities, they consume valuable food without contributing to battles. Break crates and garbage bags on every map for money and equipment. Catnip provides immediate health restoration and should be grabbed whenever possible — if you are one move away and still have an action, target the tile containing catnip to pick it up. Money is best spent on cattery upgrades and breeding enhancements before buying consumables.",
+  },
+  {
+    q: "What are familiars (maggots, flies) and how do I use them?",
+    a: "Familiars like maggots and flies seem weak but serve crucial tactical roles: sacrificial positioning to trigger traps that would hurt your cats, aggro drawing to waste enemy turns and tank damage, and controlled placement where you choose their battlefield entry point. Position familiars strategically to force enemies into disadvantageous spots while protecting your main cats. A well-placed maggot can soak two enemy attacks that would have hit your damage dealer — that is an enormous value trade. Never underestimate the utility of a disposable familiar.",
+  },
+  {
+    q: "What are the most common mistakes new Mewgenics players make?",
+    a: "The top five: (1) Ignoring positioning — treating combat like a straightforward brawler instead of a tactical chess match where facing direction and terrain matter more than raw stats. (2) Keeping bad kittens — every cat that lacks useful abilities still consumes food; retire or dismiss them. (3) Never using the tactical view (hold Y on Steam Deck / left mouse on PC) — it reveals hidden enemies, money in rocks, and optimal positioning opportunities. (4) Forgetting to check the turn order display — it shows exactly when each unit acts, so always eliminate the enemy attacking first. (5) Hoarding one-use items and abilities — use them when they create an advantage; saving them for later usually means never using them at all.",
+  },
+];
+
+export default function FaqPage() {
   return (
-    <main className="min-h-screen p-8 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-2 text-text-primary">Mewgenics FAQ</h1>
-      <p className="text-text-muted mb-8">Last updated: June 2026</p>
+    <div className="mx-auto max-w-6xl px-4 py-12">
+      <h1 className="text-3xl sm:text-4xl font-extrabold font-heading mb-2">
+        Mewgenics <span className="text-accent">FAQ</span>
+      </h1>
+      <p className="text-text-muted mb-10 max-w-2xl">
+        Answers to the most frequently asked questions from Mewgenics cat breeders and tacticians. Whether you are learning the basics of cat genetics or optimizing your combat squad, you will find practical answers here.
+      </p>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-text-primary">Overview</h2>
-        <p className="text-text-muted leading-relaxed mb-4">
-          Welcome to our comprehensive Mewgenics FAQ guide. This page covers everything you need to know about common questions, beginner tips, known issues.
-          Our team of experienced players has compiled the most accurate and up-to-date information to help you master Mewgenics.
-        </p>
-      </section>
+      <div className="space-y-4">
+        {FAQ_ITEMS.map((item, i) => (
+          <details key={i} className="p-4 border border-border bg-bg-card">
+            <summary className="font-semibold cursor-pointer hover:text-accent font-heading text-lg">
+              {item.q}
+            </summary>
+            <p className="mt-3 text-text-muted leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-text-primary">Key Data Table</h2>
+      <div className="mt-10">
+        <h2 className="text-2xl font-bold font-heading mb-4">Key Stats at a Glance</h2>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="border-b border-border">
-                <th className="text-left p-3 text-accent">Category</th>
-                <th className="text-left p-3 text-accent">Name</th>
-                <th className="text-left p-3 text-accent">Details</th>
-                <th className="text-left p-3 text-accent">Rating</th>
+          <table className="w-full text-left border border-border text-sm">
+            <thead className="bg-bg-card">
+              <tr>
+                <th className="p-3 border border-border">Topic</th>
+                <th className="p-3 border border-border">Detail</th>
+                <th className="p-3 border border-border">Priority</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-border hover:bg-bg-elevated">
-                <td className="p-3 text-text-primary">Starter</td>
-                <td className="p-3 text-accent-warm">Basic Option</td>
-                <td className="p-3 text-text-muted">Good for beginners, easy to use</td>
-                <td className="p-3 text-success">B+</td>
+              <tr>
+                <td className="p-3 border border-border font-semibold">Positioning</td>
+                <td className="p-3 border border-border text-text-muted">Backstab = 3x damage; grass = 50% dodge; face direction matters</td>
+                <td className="p-3 border border-border text-danger">Critical</td>
               </tr>
-              <tr className="border-b border-border hover:bg-bg-elevated">
-                <td className="p-3 text-text-primary">Intermediate</td>
-                <td className="p-3 text-accent-warm">Mid-Game Choice</td>
-                <td className="p-3 text-text-muted">Balanced performance, versatile</td>
-                <td className="p-3 text-success">A-</td>
+              <tr>
+                <td className="p-3 border border-border font-semibold">Breeding</td>
+                <td className="p-3 border border-border text-text-muted">Kittens inherit stats/abilities from parents; inbreeding = mutations</td>
+                <td className="p-3 border border-border text-danger">Critical</td>
               </tr>
-              <tr className="border-b border-border hover:bg-bg-elevated">
-                <td className="p-3 text-text-primary">Advanced</td>
-                <td className="p-3 text-accent-warm">Expert Pick</td>
-                <td className="p-3 text-text-muted">High skill ceiling, top performance</td>
-                <td className="p-3 text-success">S</td>
+              <tr>
+                <td className="p-3 border border-border font-semibold">Squad Size</td>
+                <td className="p-3 border border-border text-text-muted">4 cats = stable; 3 cats = faster XP; 2 cats = expert only</td>
+                <td className="p-3 border border-border text-success">High</td>
+              </tr>
+              <tr>
+                <td className="p-3 border border-border font-semibold">Wet Hairballs</td>
+                <td className="p-3 border border-border text-text-muted">Extinguish fire, push enemies, grow grass, stop burn damage</td>
+                <td className="p-3 border border-border text-success">High</td>
+              </tr>
+              <tr>
+                <td className="p-3 border border-border font-semibold">Familiars</td>
+                <td className="p-3 border border-border text-text-muted">Trigger traps, draw aggro, control battlefield positioning</td>
+                <td className="p-3 border border-border text-accent">Medium</td>
+              </tr>
+              <tr>
+                <td className="p-3 border border-border font-semibold">Tactical View</td>
+                <td className="p-3 border border-border text-text-muted">Hold Y/LMB — reveals hidden enemies, loot, positioning options</td>
+                <td className="p-3 border border-border text-accent">Medium</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-text-primary">Step-by-Step Guide</h2>
-
-        <div className="mb-6 p-4 bg-bg-elevated rounded-lg border border-border">
-          <h3 className="text-lg font-semibold mb-2 text-accent">Step 1: Getting Started</h3>
-          <p className="text-text-muted">
-            Begin by understanding the core mechanics of Mewgenics. Focus on the fundamentals before attempting advanced strategies.
-            Practice regularly to build muscle memory and game sense.
-          </p>
-        </div>
-
-        <div className="mb-6 p-4 bg-bg-elevated rounded-lg border border-border">
-          <h3 className="text-lg font-semibold mb-2 text-accent">Step 2: Mid-Game Progression</h3>
-          <p className="text-text-muted">
-            Once comfortable with basics, start exploring more complex strategies. Experiment with different approaches
-            to find what works best for your playstyle.
-          </p>
-        </div>
-
-        <div className="mb-6 p-4 bg-bg-elevated rounded-lg border border-border">
-          <h3 className="text-lg font-semibold mb-2 text-accent">Step 3: Mastery</h3>
-          <p className="text-text-muted">
-            At the advanced level, optimization becomes key. Fine-tune every aspect of your approach
-            to achieve peak performance in Mewgenics.
-          </p>
-        </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-text-primary">Pro Tips</h2>
-        <ul className="list-disc list-inside space-y-3 text-text-muted">
-          <li>Always prioritize <strong className="text-accent-warm">resource management</strong> early in the game</li>
-          <li>Experiment with different combinations to find unexpected synergies</li>
-          <li>Join the community Discord to discuss strategies with other players</li>
-          <li>Check back regularly for updated tier lists and meta analysis</li>
-          <li>Watch patch notes carefully — the meta shifts with each update</li>
-        </ul>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-text-primary">FAQ</h2>
-
-        <div className="mb-4 p-4 bg-bg-card rounded-lg border border-border">
-          <h3 className="text-lg font-semibold mb-2 text-accent">Q: What is the best way to start in Mewgenics?</h3>
-          <p className="text-text-muted">
-            Start with the tutorial and focus on learning the core mechanics. Our beginner's guide above covers the essential first steps for getting started with Mewgenics.
-          </p>
-        </div>
-
-        <div className="mb-4 p-4 bg-bg-card rounded-lg border border-border">
-          <h3 className="text-lg font-semibold mb-2 text-accent">Q: How often is the meta updated?</h3>
-          <p className="text-text-muted">
-            The Mewgenics meta shifts with each major patch. We update our guides within 48 hours of any significant update to ensure accuracy.
-          </p>
-        </div>
-
-        <div className="mb-4 p-4 bg-bg-card rounded-lg border border-border">
-          <h3 className="text-lg font-semibold mb-2 text-accent">Q: Are these strategies viable for all skill levels?</h3>
-          <p className="text-text-muted">
-            Yes! Our guides are designed to help players of all skill levels, from complete beginners to competitive veterans in Mewgenics.
-          </p>
-        </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 text-text-primary">Quick Reference</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="border-b border-border">
-                <th className="text-left p-3 text-accent">Phase</th>
-                <th className="text-left p-3 text-accent">Focus</th>
-                <th className="text-left p-3 text-accent">Key Actions</th>
-                <th className="text-left p-3 text-accent">Priority</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-border hover:bg-bg-elevated">
-                <td className="p-3 text-text-primary">Early Game</td>
-                <td className="p-3 text-accent-warm">Foundation</td>
-                <td className="p-3 text-text-muted">Learn basics, gather resources</td>
-                <td className="p-3 text-danger">High</td>
-              </tr>
-              <tr className="border-b border-border hover:bg-bg-elevated">
-                <td className="p-3 text-text-primary">Mid Game</td>
-                <td className="p-3 text-accent-warm">Expansion</td>
-                <td className="p-3 text-text-muted">Optimize builds, explore options</td>
-                <td className="p-3 text-success">Medium</td>
-              </tr>
-              <tr className="border-b border-border hover:bg-bg-elevated">
-                <td className="p-3 text-text-primary">Late Game</td>
-                <td className="p-3 text-accent-warm">Mastery</td>
-                <td className="p-3 text-text-muted">Perfect execution, min-maxing</td>
-                <td className="p-3 text-accent">Ongoing</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }
