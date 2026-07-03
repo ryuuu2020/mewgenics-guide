@@ -5,6 +5,6 @@ export const dynamic = 'force-static';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://mewgenics-guide.vercel.app/sitemap.xml',
+    sitemap: 'https://mewgenics.gguidehub.com/sitemap.xml',
   };
 }

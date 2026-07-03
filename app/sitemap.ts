@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://mewgenics-guide.vercel.app';
+const BASE_URL = 'https://mewgenics.gguidehub.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
