@@ -346,12 +346,12 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://afdian.com/a/gameguidehub"
+                  href="https://app.unifans.io/c/ryu2020"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[11px] font-mono text-tactical-blue hover:text-tactical-blue-dim transition-colors"
                 >
-                  ❤️ Support Us
+                  Support us on UniFans
                 </a>
               </div>
             </div>

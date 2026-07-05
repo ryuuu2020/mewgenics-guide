@@ -20,8 +20,8 @@ export default function NotFound() {
         </div>
         <p className="text-xs text-text-muted mt-8">
           Want to speed things up?{' '}
-          <a href="https://afdian.com/a/gameguidehub" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
-            Support us on Afdian ❤️
+          <a href="https://app.unifans.io/c/ryu2020" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
+            Support us on UniFans
           </a>
         </p>
       </div>
