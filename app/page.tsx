@@ -148,7 +148,7 @@ export default function HomePage() {
               <img
                 src="/hero.jpg"
                 alt="Mewgenics guide hero artwork"
-                className="block h-56 w-full object-cover lg:h-72"
+                className="block h-48 w-full object-cover lg:h-64"
               />
               <div className="border-t border-border-subtle px-4 py-4 lg:px-6">
                 <p className="text-[10px] font-mono uppercase tracking-[0.24em] text-text-muted">Featured Command Brief</p>
