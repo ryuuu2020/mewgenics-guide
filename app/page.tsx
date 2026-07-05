@@ -196,7 +196,7 @@ export default function HomePage() {
                         </td>
                         <td className="py-2.5 px-4">
                           <a
-                            href={`/builds/${row.name.toLowerCase().replace(/\s+/g, '-')}`}
+                            href="/builds"
                             className="text-text-primary hover:text-tactical-blue transition-colors"
                           >
                             {row.name}
@@ -318,6 +318,9 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4 text-[11px] font-mono text-text-muted">
                 <span>&copy; {new Date().getFullYear()} Mewgenics</span>
+              <span className="font-body text-sm text-stone">
+                Part of the <a href="https://gguidehub.com" className="text-stone hover:text-bark underline underline-offset-2 transition-colors">GameGuideHub</a> network
+              </span>
                 <a href="/privacy" className="hover:text-text-secondary transition-colors">
                   Privacy
                 </a>
