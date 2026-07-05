@@ -144,6 +144,22 @@ export default function HomePage() {
         {/* ===== Content area with grid bg ===== */}
         <main className="flex-1 bg-tactical-grid p-4 lg:p-6">
           <div className="max-w-6xl mx-auto space-y-6">
+            <section className="overflow-hidden border border-border-subtle bg-abyss-light">
+              <img
+                src="/hero.jpg"
+                alt="Mewgenics guide hero artwork"
+                className="block h-56 w-full object-cover lg:h-72"
+              />
+              <div className="border-t border-border-subtle px-4 py-4 lg:px-6">
+                <p className="text-[10px] font-mono uppercase tracking-[0.24em] text-text-muted">Featured Command Brief</p>
+                <h2 className="mt-2 font-display text-xl font-semibold tracking-tight text-text-primary">
+                  Build the strangest, strongest cat squad in Mewgenics.
+                </h2>
+                <p className="mt-2 max-w-3xl text-sm text-text-secondary">
+                  Start with tier lists, breeding routes, and status-effect builds that survive the early chaos and scale into late-run boss fights.
+                </p>
+              </div>
+            </section>
 
             {/* ===== Section: Featured Tier List ===== */}
             <section>
